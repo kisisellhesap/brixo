@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kaushan+Script&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-gray: #24282b;
+  --color-red: #ff3131;
+  --color-pink: #efe8dd;
+  --font-inria: "Inria Serif";
+  --font-abidik: "Kaushan Script";
+}
+
+@layer components {
+  body {
+    @apply bg-pink font-inria text-[16px];
+  }
+  .splide__pagination__page {
+    background: var(--color-red) !important;
+  }
+  .s {
+    box-shadow: 2px 2px 2px 2px var(--color-red);
+    height: 0px;
+    color: transparent;
+    width: 60%;
+    margin-left: auto;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-[1200px]  mx-auto p-3;
+  }
+  .icon {
+    @apply text-2xl cursor-pointer p-1 rounded-full hover:translate-y-1 transition;
+  }
+  .active {
+    @apply text-red;
+  }
+}
