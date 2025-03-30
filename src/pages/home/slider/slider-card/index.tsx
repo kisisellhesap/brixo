@@ -15,7 +15,7 @@ const SliderCard: FC = () => {
         </div>
 
         <h2 className="text-5xl">Essence Mascara Lash Princess</h2>
-        <p>
+        <p className="italic">
           The Essence Mascara Lash Princess is a popular mascara known for its
           volumizing and lengthening effects. Achieve dramatic lashes with this
           long-lasting and cruelty-free formula.
