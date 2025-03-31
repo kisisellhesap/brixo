@@ -3,6 +3,7 @@ import { FC } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaPinterest } from "react-icons/fa";
+import Socialcons from "../sociaIcons";
 
 const Footer: FC = () => {
   return (
@@ -65,10 +66,8 @@ const Footer: FC = () => {
             Subscribe to get the latest deals and exclusive offers.
           </p>
 
-          <div className="flex gap-5 mt-18 text-gray-400 text-3xl">
-            <FaInstagram className="hover:text-white cursor-pointer" />
-            <FaXTwitter className="hover:text-white cursor-pointer" />
-            <FaPinterest className="hover:text-white cursor-pointer" />
+          <div className="mt-15">
+            <Socialcons />
           </div>
         </div>
       </div>
