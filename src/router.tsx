@@ -15,10 +15,7 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Navigate to="/home" /> },
-      {
-        path: "login", // 'home' sayfası alt yolu
-        element: <Login />,
-      },
+
       {
         path: "home", // 'home' sayfası alt yolu
         element: <Home />,
@@ -48,5 +45,9 @@ export const router = createBrowserRouter([
         element: <NotFound />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
