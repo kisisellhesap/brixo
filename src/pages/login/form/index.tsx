@@ -1,9 +1,12 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import Socialcons from "../../../components/sociaIcons";
+import { FaEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 const Form: FC = () => {
   const [isSignIn, setIsSignIn] = useState<boolean>(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const changeFormSign = () => {
     setIsSignIn(!isSignIn);
@@ -93,15 +96,23 @@ const Form: FC = () => {
                   </div>
                 )}
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
-                  type="password"
+                  type={!showPassword ? "text" : "password"}
                   name="password"
                   id="password"
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 pr-10 py-1.5 text-base text-gray outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red sm:text-sm/6"
                 />
+
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-2 top-0  h-full w-6 flex items-center justify-center cursor-pointer text-gray"
+                >
+                  {showPassword ? <FaRegEyeSlash /> : <FaEye />}
+                </button>
               </div>
             </div>
 
@@ -110,7 +121,7 @@ const Form: FC = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-red px-3 py-1.5 text-sm/6 font-semibold text-pink shadow-xs hover:bg-red/80 focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
               >
-                Sign in
+                {!isSignIn ? "Sign in" : "Sign up"}
               </button>
             </div>
           </form>
