@@ -1,5 +1,4 @@
 import { FC } from "react";
-import LogoBanner from "./logoBanner";
 import Form from "./form";
 
 const Login: FC = () => {

@@ -1,8 +1,5 @@
 import { FC } from "react";
 
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaPinterest } from "react-icons/fa";
 import Socialcons from "../sociaIcons";
 
 const Footer: FC = () => {
@@ -72,7 +69,6 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      {/* CopyRight */}
       <div className="mt-10 text-center text-gray-500 text-sm">
         © 2025 Brixo. All rights reserved.
       </div>
