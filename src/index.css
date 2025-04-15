@@ -16,15 +16,19 @@
   .splide__pagination__page {
     background: var(--color-red) !important;
   }
-  .s {
+  /* .s {
     box-shadow: 2px 2px 2px 2px var(--color-red);
     height: 0px;
     color: transparent;
     width: 60%;
     margin-left: auto;
-  }
+  } */
   .z-index {
     z-index: -1;
+  }
+
+  .shadow-css {
+    box-shadow: 0px 0px 4px 0px var(--color-gray);
   }
 }
 

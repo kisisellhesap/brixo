@@ -4,10 +4,10 @@ import RewiewBtn from "../../../components/RewiewBtn";
 
 const ProductCard: FC = () => {
   return (
-    <div className="shadow-md hover:shadow-2xl p-4 rounded-md flex flex-col gap-3 font-bold italic text-gray">
+    <div className="shadow-css  cursor-pointer p-4 rounded-md flex flex-col gap-3 font-bold italic text-gray">
       <header className="flex justify-between gap-2 items-center">
         <h3 className="">Essence</h3>
-        <p className="flex items-center gap-2">
+        <p className="flex items-center gap-2 text-red">
           <span>4.3</span> <GiRoundStar />
         </p>
       </header>

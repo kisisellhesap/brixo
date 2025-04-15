@@ -11,9 +11,9 @@ const ProductInCart: FC = () => {
       />
 
       <div className="w-full flex flex-col gap-3">
-        <header className="flex justify-between gap-2 items-center">
+        <header className="flex justify-between gap-2 items-center font-bold">
           <h3 className="">Essence</h3>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 text-red">
             <span>4.3</span> <GiRoundStar />
           </p>
         </header>
