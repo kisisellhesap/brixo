@@ -1,24 +1,28 @@
 import { FC } from "react";
 import { GiRoundStar } from "react-icons/gi";
 import RewiewBtn from "../../../components/RewiewBtn";
+import { Product } from "../../../types";
 
-const ProductCard: FC = () => {
+interface ProductCardProps {
+  product: Product;
+}
+const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="shadow-css  cursor-pointer p-4 rounded-md flex flex-col gap-3 font-bold italic text-gray">
       <header className="flex justify-between gap-2 items-center">
-        <h3 className="">Essence</h3>
+        <h3 className="">{product.brand}</h3>
         <p className="flex items-center gap-2 text-red">
-          <span>4.3</span> <GiRoundStar />
+          <span>{product.rating}</span> <GiRoundStar />
         </p>
       </header>
 
       <img
-        src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-        alt=""
-        className="max-w-[250px] object-fit-cover"
+        src={product.thumbnail}
+        alt={product.title}
+        className="max-w-[250px] object-fit-cover mix-blend-difference"
       />
 
-      <h2>Essence Mascara Lash Princess</h2>
+      <h2>{product.title}</h2>
       <div className="flex justify-between gap-2 mb-5">
         <p className="line-through">$19.00</p>
         <p>$7.00</p>
