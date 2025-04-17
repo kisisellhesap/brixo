@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "title": "Colour Block Denim Shirt",
-      "description": "Colour block denim shirt comes in multi-colour with a classic collar and one pocket.",
+      "title": "Timberland Nylon Jacket",
+      "description": "Timberland zip front nylon jacket comes in mustard with multiple pockets.",
       "category": "jackets",
       "price": 40.0,
       "size": "L",
@@ -15,9 +15,9 @@
         "length": 50
       },
       "images": {
-        "front": "./products/1/front.webp",
-        "back": "./products/1/back.avif",
-        "brand": "./products/1/brand.webp"
+        "front": "/assets/products/1/front.webp",
+        "back": "/assets/products/1/back.webp",
+        "brand": "/assets/products/1/brand.jpg"
       },
       "discountPercentage": 7.17,
       "rating": 4.94,
@@ -52,7 +52,7 @@
       "minimumOrderQuantity": 24,
       "more": {
         "sku": "E00965955",
-        "brand": "Kansas",
+        "brand": "Timberland",
         "condition": "GREAT",
         "moreInformation": "BUTTONING",
         "fabric": "COTTON"
@@ -74,9 +74,9 @@
         "length": 28
       },
       "images": {
-        "front": "./products/2/front.webp",
-        "back": "./products/2/back.webp",
-        "brand": "./products/2/brand.webp"
+        "front": "/assets/products/2/front.webp",
+        "back": "/assets/products/2/back.webp",
+        "brand": "/assets/products/2/brand.webp"
       },
       "discountPercentage": 5.5,
       "rating": 3.28,
@@ -133,9 +133,9 @@
         "length": 26
       },
       "images": {
-        "front": "./products/3/front.webp",
-        "back": "./products/3/back.webp",
-        "brand": "./products/3/brand.webp"
+        "front": "/assets/products/3/front.webp",
+        "back": "/assets/products/3/back.webp",
+        "brand": "/assets/products/3/brand.webp"
       },
       "discountPercentage": 18.14,
       "rating": 3.82,
@@ -181,7 +181,7 @@
       "title": "Floral Print Mountaineering Jacket",
       "description": "Zip front black mountaineering jacket with floral print, a hood and multiple pockets.",
       "category": "jackets",
-      "price": null,
+      "price": 40.0,
       "size": "L",
       "tags": ["jackets", "men"],
       "gender": "men",
@@ -191,9 +191,9 @@
         "length": 34
       },
       "images": {
-        "front": "./products/4/front.webp",
-        "back": "./products/4/back.webp",
-        "brand": "./products/4/brand.webp"
+        "front": "/assets/products/4/front.webp",
+        "back": "/assets/products/4/back.webp",
+        "brand": "/assets/products/4/brand.webp"
       },
       "discountPercentage": 19.03,
       "rating": 2.51,
@@ -250,9 +250,9 @@
         "length": 32
       },
       "images": {
-        "front": "./products/5/front.webp",
-        "back": "./products/5/back.webp",
-        "brand": "./products/5/brand.webp"
+        "front": "/assets/products/5/front.webp",
+        "back": "/assets/products/5/back.webp",
+        "brand": "/assets/products/5/brand.webp"
       },
       "discountPercentage": 2.46,
       "rating": 3.91,
@@ -309,9 +309,8 @@
         "length": 26
       },
       "images": {
-        "front": "./products/6/front.webp",
-        "back": "./products/6/back.webp",
-        "brand": "./products/6/brand.webp"
+        "front": "/assets/products/6/front.webp",
+        "back": "/assets/products/6/back.webp"
       },
       "discountPercentage": 7.17,
       "rating": 4.94,
@@ -368,8 +367,8 @@
         "length": 28
       },
       "images": {
-        "front": "./products/7/front.webp",
-        "back": "./products/7/back.webp"
+        "front": "/assets/products/7/front.webp",
+        "back": "/assets/products/7/back.webp"
       },
       "discountPercentage": 5.5,
       "rating": 3.28,
@@ -426,9 +425,9 @@
         "length": 23
       },
       "images": {
-        "front": "./products/8/front.webp",
-        "back": "./products/8/back.webp",
-        "brand": "./products/8/brand.webp"
+        "front": "/assets/products/8/front.webp",
+        "back": "/assets/products/8/back.webp",
+        "brand": "/assets/products/8/brand.webp"
       },
       "discountPercentage": 18.14,
       "rating": 3.82,
@@ -484,9 +483,9 @@
         "length": 25
       },
       "images": {
-        "front": "./products/9/front.webp",
-        "back": "./products/9/back.webp",
-        "brand": "./products/9/brand.webp"
+        "front": "/assets/products/9/front.webp",
+        "back": "/assets/products/9/back.webp",
+        "brand": "/assets/products/9/brand.webp"
       },
       "discountPercentage": 19.03,
       "rating": 2.51,
@@ -543,9 +542,9 @@
         "length": 27
       },
       "images": {
-        "front": "./products/10/front.webp",
-        "back": "./products/10/back.webp",
-        "brand": "./products/10/brand.webp"
+        "front": "/assets/products/10/front.webp",
+        "back": "/assets/products/10/back.webp",
+        "brand": "/assets/products/10/brand.webp"
       },
       "discountPercentage": 2.46,
       "rating": 3.91,

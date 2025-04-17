@@ -5,10 +5,10 @@ import { BiUser } from "react-icons/bi";
 
 const Header: FC = () => {
   return (
-    <header className="mb-15 flex flex-col gap-3">
+    <header className=" flex flex-col gap-3">
       <HeaderInfo />
       <div className="container flex items-center justify-between">
-        <img src="./logo.png" className="w-[140px]" />
+        <img src="/assets/logo.png" className="w-[140px]" />
 
         <div className=" w-full flex items-center justify-end gap-15">
           <nav className="flex gap-8">

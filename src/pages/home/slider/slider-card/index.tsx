@@ -1,49 +1,61 @@
 import { FC } from "react";
 import { GiRoundStar } from "react-icons/gi";
 import RewiewBtn from "../../../../components/RewiewBtn";
+import { Product } from "../../../../types";
+import { Link } from "react-router-dom";
 
-const SliderCard: FC = () => {
+interface SliderCardProps {
+  item: Product;
+}
+const SliderCard: FC<SliderCardProps> = ({ item }) => {
   return (
-    <div className="w-[100%] h-[100%]  flex relative cursor-pointer">
-      <div className="flex flex-col gap-7 w-[50%]">
+    <Link
+      to={`/products/detail/${item.id}`}
+      className="w-[100%] h-[100%] max-lg:flex-col flex gap-5 relative cursor-pointer"
+    >
+      <div className="flex flex-col gap-7 w-[50%] max-lg:w-[100%]  max-lg:order-2 order-1">
         <div className="flex justify-between items-center">
-          <p className="font-abidik text-5xl text-red">Essence </p>
+          <p className="font-abidik text-3xl max-lg:text-2xl text-red">
+            {item.more.brand ? item.more.brand : item.title}{" "}
+          </p>
           <div className="flex gap-2 items-center text-red font-bold">
             <GiRoundStar />
-            <span>4.94</span>
+            <span>{item.rating}</span>
           </div>
         </div>
 
-        <h2 className="text-5xl">Essence Mascara Lash Princess</h2>
-        <p className="italic">
-          The Essence Mascara Lash Princess is a popular mascara known for its
-          volumizing and lengthening effects. Achieve dramatic lashes with this
-          long-lasting and cruelty-free formula.
-        </p>
+        {item.more.brand && (
+          <h2 className="text-5xl max-lg:text-3xl">{item.title}</h2>
+        )}
+        <p className="italic">{item.description}</p>
 
         <div className="flex items-center justify-between">
           <RewiewBtn />
-          <span className="text-xl line-through">$ 9.99</span>
+          <span className="text-xl line-through">$ {item.price}</span>
         </div>
 
         <span className="text-4xl bg-red text-pink py-1 px-3 absolute right-0 top-0 rounded-full shadow-md">
-          $ 7.17
+          $ {item.price}
         </span>
-        <div className="flex flex-wrap gap-2 mt-auto ">
-          <span className="bg-red text-pink p-1 rounded-sm text-[13px] font-bold shadow-md">
-            beauty
-          </span>
-          <span className="bg-red text-pink p-1 rounded-sm text-[13px] font-bold shadow-md">
-            mascrass
-          </span>
+        <div className="flex flex-wrap gap-2 mt-10 ">
+          {item.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="bg-red text-pink p-1 rounded-sm text-[13px] font-bold shadow-md"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
-      <img
-        src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-        alt="Image 1"
-        className="w-[50%] h-[100%] object-fit-cover"
-      />
-    </div>
+      <div className="bg-pink flex items-center justify-center w-[50%] max-lg:w-[100%]  max-lg:order-1 order-2">
+        <img
+          src={item.images.front}
+          alt={item.title}
+          className=" w-[50%]  max-lg:w-[30%] min-w-[300px]  object-fit-cover mix-blend-darken"
+        />
+      </div>
+    </Link>
   );
 };
 

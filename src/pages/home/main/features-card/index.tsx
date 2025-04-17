@@ -8,8 +8,8 @@ type Props = {
 
 const FeaturesCard: FC<Props> = ({ feature }) => {
   return (
-    <div className="grid grid-cols-2 items-center group">
-      <div className="flex flex-col gap-6 group-even:first:order-2">
+    <div className="grid grid-cols-2 max-lg:grid-cols-1 items-center group">
+      <div className="flex flex-col gap-6 group-even:order-2 max-lg:group-odd:order-2">
         <h3 className="text-3xl font-bold leading-12">{feature.title}</h3>
         <p className="text-justify italic">{feature.description}</p>
         <RewiewBtn />

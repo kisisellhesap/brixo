@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "product/detail/:id", // 'home' sayfası alt yolu
+        path: "products/detail/:id", // 'home' sayfası alt yolu
         element: <Detail />,
       },
       {

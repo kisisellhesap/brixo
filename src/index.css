@@ -10,19 +10,14 @@
 }
 
 @layer components {
-  body {
-    @apply bg-pink font-inria text-[16px];
+  body,
+  html {
+    @apply bg-pink font-inria text-[16px] max-lg:text-[15px];
   }
   .splide__pagination__page {
     background: var(--color-red) !important;
   }
-  /* .s {
-    box-shadow: 2px 2px 2px 2px var(--color-red);
-    height: 0px;
-    color: transparent;
-    width: 60%;
-    margin-left: auto;
-  } */
+
   .z-index {
     z-index: -1;
   }
@@ -34,7 +29,7 @@
 
 @layer utilities {
   .container {
-    @apply max-w-[1200px]  mx-auto p-3;
+    @apply max-w-[1200px] max-lg:max-w-[900px]  mx-auto p-3;
   }
   .icon {
     @apply text-2xl cursor-pointer p-1 rounded-full hover:translate-y-1 transition;

@@ -13,17 +13,17 @@ const Form: FC = () => {
   };
 
   return (
-    <div className="bg-pink  rounded-2xl w-[440px] h-[740px]">
+    <div className="bg-pink  rounded-2xl w-[440px] h-[740px] max-[500px]:w-full max-[500px]:h-full max-[500px]:bg-pink/50">
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col  items-center justify-center gap-5 ">
-          <img src="./logo.png" className="w-[200px]" alt="" />
+          <img src="/assets/logo.png" className="w-[200px]" alt="" />
           <div className="min-h-[72px]">
             {isSignIn ? (
               <h2 className=" text-center text-2xl/9 font-bold tracking-tight text-gray italic">
                 We don't want to see you among the crowds
               </h2>
             ) : (
-              <h2 className="text-3xl text-red font-bold italic">
+              <h2 className="text-3xl text-red font-bold italic max-[500px]:text-center">
                 No Lines, No Crowds
               </h2>
             )}
