@@ -3,6 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import RewiewBtn from "../../../components/RewiewBtn";
 import { Product } from "../../../types";
 import { Link } from "react-router-dom";
+import { discountPercentage } from "../../../utils/discountPercentage";
 
 interface ProductCardProps {
   product: Product;
@@ -27,12 +28,21 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       />
 
       <h2 className="truncate">{product.title}</h2>
-      <div className="flex justify-between gap-2 mb-5">
-        <p className="line-through">$19.00</p>
-        <p>$7.00</p>
+      <div className="flex justify-between items-center gap-2 mb-5">
+        <p className="text-xl">
+          ${" "}
+          {discountPercentage({
+            percent: product.discountPercentage,
+            price: product.price,
+          }).toFixed(0)}
+        </p>
+        <p className="line-through text-gray/50">${product.price}</p>
       </div>
 
-      <RewiewBtn />
+      <div className="flex justify-between gap-2 items-center">
+        <RewiewBtn />
+        <h3 className=" text-lg text-gray/30">{product.availabilityStatus}</h3>
+      </div>
     </Link>
   );
 };

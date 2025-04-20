@@ -1,15 +1,61 @@
-import { FC, useState } from "react";
+import { ChangeEvent, FC, MouseEvent, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Socialcons from "../../../components/sociaIcons";
 import { FaEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../../redux/store";
+import { loginUser, registerUser } from "../../../redux/actions/userActions";
+import { SignUser } from "../../../types";
+import { v4 as uuidv4 } from "uuid";
 
 const Form: FC = () => {
-  const [isSignIn, setIsSignIn] = useState<boolean>(false);
+  const [isSignUp, setIsSignUp] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
+  const { users } = useSelector((store: RootState) => store.userReducer);
+  const [user, setUser] = useState<SignUser>({
+    id: uuidv4(),
+    email: "",
+    password: "",
+  });
+
+  const dispatch = useDispatch<AppDispatch>();
   const changeFormSign = () => {
-    setIsSignIn(!isSignIn);
+    setIsSignUp(!isSignUp);
+  };
+
+  const validatePassword = (password: string): boolean => {
+    const regex =
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*().])[A-Za-z\d!@#$%^&*().]{1,11}$/;
+    return regex.test(password);
+  };
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setUser((prevUser) => ({
+      ...prevUser,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
+    console.log("users", users);
+  }, [users]);
+
+  const handleSign = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (isSignUp) {
+      const filtered = users.some((item, i) => item.email === user.email);
+      console.log(filtered);
+      if (validatePassword(user.password)) {
+        console.log(user);
+        dispatch(registerUser(user));
+      } else {
+        console.log("geçersiz");
+      }
+    } else {
+      dispatch(loginUser());
+    }
   };
 
   return (
@@ -18,7 +64,7 @@ const Form: FC = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col  items-center justify-center gap-5 ">
           <img src="/assets/logo.png" className="w-[200px]" alt="" />
           <div className="min-h-[72px]">
-            {isSignIn ? (
+            {isSignUp ? (
               <h2 className=" text-center text-2xl/9 font-bold tracking-tight text-gray italic">
                 We don't want to see you among the crowds
               </h2>
@@ -33,13 +79,13 @@ const Form: FC = () => {
         <div className=" mt-5 relative">
           <div
             className={`w-[50%] h-[31.99px] rounded-lg bg-red transition ${
-              isSignIn ? "translate-x-[100%]" : "translate-x-[0]"
+              isSignUp ? "translate-x-[100%]" : "translate-x-[0]"
             }`}
           ></div>
           <div className="absolute inset-0 w-[100%] flex items-center  font-bold italic">
             <button
               className={`w-50 cursor-pointer ${
-                isSignIn ? "text-gray" : "text-pink"
+                isSignUp ? "text-gray" : "text-pink"
               }`}
               onClick={changeFormSign}
             >
@@ -47,7 +93,7 @@ const Form: FC = () => {
             </button>
             <button
               className={`w-50 cursor-pointer ${
-                isSignIn ? "text-pink" : "text-gray"
+                isSignUp ? "text-pink" : "text-gray"
               }`}
               onClick={changeFormSign}
             >
@@ -73,6 +119,7 @@ const Form: FC = () => {
                   autoComplete="email"
                   required
                   className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red sm:text-sm/6"
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -85,7 +132,7 @@ const Form: FC = () => {
                 >
                   Password
                 </label>
-                {!isSignIn && (
+                {!isSignUp && (
                   <div className="text-sm">
                     <a
                       href="#"
@@ -104,6 +151,8 @@ const Form: FC = () => {
                   autoComplete="current-password"
                   required
                   className="block w-full rounded-md bg-white px-3 pr-10 py-1.5 text-base text-gray outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red sm:text-sm/6"
+                  onChange={handleChange}
+                  maxLength={11}
                 />
 
                 <button
@@ -118,10 +167,11 @@ const Form: FC = () => {
 
             <div>
               <button
-                type="submit"
+                type="button"
                 className="flex w-full justify-center rounded-md bg-red px-3 py-1.5 text-sm/6 font-semibold text-pink shadow-xs hover:bg-red/80 focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
+                onClick={handleSign}
               >
-                {!isSignIn ? "Sign in" : "Sign up"}
+                {!isSignUp ? "Sign in" : "Sign up"}
               </button>
             </div>
           </form>

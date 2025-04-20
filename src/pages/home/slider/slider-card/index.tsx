@@ -3,6 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import RewiewBtn from "../../../../components/RewiewBtn";
 import { Product } from "../../../../types";
 import { Link } from "react-router-dom";
+import { discountPercentage } from "../../../../utils/discountPercentage";
 
 interface SliderCardProps {
   item: Product;
@@ -31,11 +32,17 @@ const SliderCard: FC<SliderCardProps> = ({ item }) => {
 
         <div className="flex items-center justify-between">
           <RewiewBtn />
-          <span className="text-xl line-through">$ {item.price}</span>
+          <span className=" line-through text-gray/50 text-2xl">
+            $ {item.price}
+          </span>
         </div>
 
         <span className="text-4xl bg-red text-pink py-1 px-3 absolute right-0 top-0 rounded-full shadow-md">
-          $ {item.price}
+          ${" "}
+          {discountPercentage({
+            percent: item.discountPercentage,
+            price: item.price,
+          }).toFixed(0)}
         </span>
         <div className="flex flex-wrap gap-2 mt-10 ">
           {item.tags.map((tag, i) => (

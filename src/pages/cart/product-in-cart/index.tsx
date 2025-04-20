@@ -3,7 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 
 const ProductInCart: FC = () => {
   return (
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-3 max-md:flex-col items-center">
       <img
         src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
         alt=""

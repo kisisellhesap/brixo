@@ -12,7 +12,7 @@
 @layer components {
   body,
   html {
-    @apply bg-pink font-inria text-[16px] max-lg:text-[15px];
+    @apply bg-pink font-inria text-[16px] max-lg:text-[15px] select-none;
   }
   .splide__pagination__page {
     background: var(--color-red) !important;

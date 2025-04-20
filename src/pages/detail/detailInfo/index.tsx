@@ -1,30 +1,49 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import { FaRegHeart } from "react-icons/fa";
 // import { FaHeart } from "react-icons/fa";
 import { GiSleevelessJacket } from "react-icons/gi";
-import { RootState } from "../../../redux/store";
-import { useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../../redux/store";
+import { useDispatch, useSelector } from "react-redux";
 import DetailInfoSkeleton from "./detailInfoSkeleton";
+import { discountPercentage } from "../../../utils/discountPercentage";
+import { addToCart } from "../../../redux/actions/addToCart";
 
 const DetailInfo: FC = () => {
   const { loading, singleProduct } = useSelector(
     (store: RootState) => store.productReducer
   );
+  const { cartProducts } = useSelector((store: RootState) => store.cartReducer);
+
+  const dispatch = useDispatch<AppDispatch>();
 
   if (loading && !singleProduct) {
     return <DetailInfoSkeleton />;
   }
 
   if (!loading && singleProduct) {
+    const addToCartFunc = (e: MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      dispatch(addToCart(singleProduct));
+    };
+
     return (
       <div className="text-gray flex flex-col font-bold gap-5 w-[40%] max-lg:w-[100%]">
         <h2 className=" text-3xl">{singleProduct.title}</h2>
 
-        <span className="text-black/50  text-2xl">
-          Size : {singleProduct.size}
-        </span>
+        <div className="text-black/50  text-xl flex gap-2 justify-between items-center">
+          <span>Size : {singleProduct.size}</span>
+
+          <span>Stock : {singleProduct.stock}</span>
+        </div>
+
         <div className="flex items-center justify-between">
-          <h3 className="text-3xl">$ {singleProduct.price}</h3>
+          <h3 className="text-3xl">
+            ${" "}
+            {discountPercentage({
+              percent: singleProduct.discountPercentage,
+              price: singleProduct.price,
+            }).toFixed(0)}
+          </h3>
           <span className="text-2xl line-through text-black/40">
             $ {singleProduct.price}
           </span>
@@ -36,7 +55,12 @@ const DetailInfo: FC = () => {
 
           <span> SAVE ITEM</span>
         </button>
-        <button className="bg-red text-pink px-3 py-2  flex items-center gap-3 rounded-md cursor-pointer justify-center hover:brightness-110">
+
+        <button
+          className="bg-red text-pink px-3 py-2  flex items-center gap-3 rounded-md cursor-pointer justify-center hover:brightness-110"
+          onClick={addToCartFunc}
+          type="button"
+        >
           ADD TO BAG
         </button>
 
@@ -61,7 +85,7 @@ const DetailInfo: FC = () => {
               CONDITION: <span className="italic text-black/50">GOOD</span>
             </p>
             <p>
-              MORE INFORMATION:
+              MORE INFORMATION:{" "}
               <span className="italic text-black/50">FULL LINING</span>
             </p>
             <p>

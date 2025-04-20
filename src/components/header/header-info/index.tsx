@@ -8,7 +8,7 @@ const HeaderInfo: FC = () => {
     <div className="container flex items-center justify-between gap-3 font-semibold italic mt-2">
       <Socialcons />
 
-      <h3>"Your Shopping, Your Way!"</h3>
+      <h3 className="max-lg:hidden">"Your Shopping, Your Way!"</h3>
 
       <Link to="cart" className="text-3xl relative cursor-pointer">
         <BsCart2 />

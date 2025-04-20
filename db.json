@@ -5,9 +5,12 @@
       "title": "Timberland Nylon Jacket",
       "description": "Timberland zip front nylon jacket comes in mustard with multiple pockets.",
       "category": "jackets",
-      "price": 40.0,
+      "price": 40,
       "size": "L",
-      "tags": ["jackets", "men"],
+      "tags": [
+        "jackets",
+        "men"
+      ],
       "gender": "men",
       "dimensions": {
         "sleeveLength": 16,
@@ -63,11 +66,13 @@
       "title": "The North Face Mountaineering Jacket",
       "description": "Two tone mountaineering jacket in black & red with a hood and multiple pockets.",
       "category": "jackets",
-      "price": 85.0,
+      "price": 85,
       "size": "XL",
-      "tags": ["jackets", "men"],
+      "tags": [
+        "jackets",
+        "men"
+      ],
       "gender": "men",
-
       "dimensions": {
         "sleeveLength": 25,
         "bust": 45,
@@ -122,11 +127,13 @@
       "title": "Blue Ski Jacket",
       "description": "Zip front ski jacket in blue with multiple pockets.",
       "category": "jackets",
-      "price": 48.0,
+      "price": 48,
       "size": "XL",
-      "tags": ["jackets", "men"],
+      "tags": [
+        "jackets",
+        "men"
+      ],
       "gender": "men",
-
       "dimensions": {
         "sleeveLength": 26,
         "bust": 49,
@@ -181,9 +188,12 @@
       "title": "Floral Print Mountaineering Jacket",
       "description": "Zip front black mountaineering jacket with floral print, a hood and multiple pockets.",
       "category": "jackets",
-      "price": 40.0,
+      "price": 40,
       "size": "L",
-      "tags": ["jackets", "men"],
+      "tags": [
+        "jackets",
+        "men"
+      ],
       "gender": "men",
       "dimensions": {
         "sleeveLength": 25,
@@ -239,11 +249,13 @@
       "title": "Terracotta Shearling Jacket",
       "description": "Zip front shearling jacket in terracotta with faux shearling lining and multiple pockets.",
       "category": "jackets",
-      "price": 50.0,
+      "price": 50,
       "size": "XL",
-      "tags": ["jackets", "men"],
+      "tags": [
+        "jackets",
+        "men"
+      ],
       "gender": "men",
-
       "dimensions": {
         "sleeveLength": 27,
         "bust": 51,
@@ -293,15 +305,17 @@
         "fabric": "POLYESTER"
       }
     },
-
     {
       "id": 6,
       "title": "Patchwork Ski Jacket",
       "description": "Colour block denim shirt comes in multi-colour with a classic collar and one pocket.",
       "category": "jackets",
-      "price": 45.0,
+      "price": 45,
       "size": "S",
-      "tags": ["jackets", "women"],
+      "tags": [
+        "jackets",
+        "women"
+      ],
       "gender": "women",
       "dimensions": {
         "sleeveLength": 22,
@@ -356,11 +370,13 @@
       "title": "Animal Print Faux Fur Jacket",
       "description": "Animal print faux fur jacket. Comes in brown with multiple pockets.",
       "category": "jackets",
-      "price": 45.0,
+      "price": 45,
       "size": "L",
-      "tags": ["jackets", "women"],
+      "tags": [
+        "jackets",
+        "women"
+      ],
       "gender": "women",
-
       "dimensions": {
         "sleeveLength": 22,
         "bust": 44,
@@ -414,11 +430,13 @@
       "title": "Light Brown Shearling Suede Jacket",
       "description": "Light brown shearling suede jacket with multiple pockets.",
       "category": "jackets",
-      "price": 55.0,
+      "price": 55,
       "size": "M",
-      "tags": ["jackets", "women"],
+      "tags": [
+        "jackets",
+        "women"
+      ],
       "gender": "women",
-
       "dimensions": {
         "sleeveLength": 24,
         "bust": 42,
@@ -473,9 +491,12 @@
       "title": "Tek Gear Coral Puffer Jacket",
       "description": "Zip front black mountaineering jacket with floral print, a hood and multiple pockets.",
       "category": "jackets",
-      "price": 30.0,
+      "price": 30,
       "size": "M",
-      "tags": ["jackets", "women"],
+      "tags": [
+        "jackets",
+        "women"
+      ],
       "gender": "women",
       "dimensions": {
         "sleeveLength": 25,
@@ -531,11 +552,13 @@
       "title": "Zip Front Colour Block Ski Jacket",
       "description": "Zip front ski jacket comes in multi-colour with multiple pockets and shoulder pads.",
       "category": "jackets",
-      "price": 50.0,
+      "price": 50,
       "size": "S",
-      "tags": ["jackets", "women"],
+      "tags": [
+        "jackets",
+        "women"
+      ],
       "gender": "women",
-
       "dimensions": {
         "sleeveLength": 22,
         "bust": 56,
@@ -584,6 +607,149 @@
         "moreInformation": " FULL LINING",
         "fabric": "NYLON"
       }
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "title": "Blue Ski Jacket",
+      "description": "Zip front ski jacket in blue with multiple pockets.",
+      "category": "jackets",
+      "price": 48,
+      "size": "XL",
+      "tags": [
+        "jackets",
+        "men"
+      ],
+      "gender": "men",
+      "dimensions": {
+        "sleeveLength": 26,
+        "bust": 49,
+        "length": 26
+      },
+      "images": {
+        "front": "/assets/products/3/front.webp",
+        "back": "/assets/products/3/back.webp",
+        "brand": "/assets/products/3/brand.webp"
+      },
+      "discountPercentage": 18.14,
+      "rating": 3.82,
+      "stock": 59,
+      "warrantyInformation": "2 year warranty",
+      "shippingInformation": "Ships in 1-2 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Ethan Thompson",
+          "reviewerEmail": "ethan.thompson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Levi Hicks",
+          "reviewerEmail": "levi.hicks@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Hazel Gardner",
+          "reviewerEmail": "hazel.gardner@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "60 days return policy",
+      "minimumOrderQuantity": 25,
+      "more": {
+        "sku": "E00985062",
+        "brand": "Weather Breaker",
+        "condition": "GREAT",
+        "moreInformation": "FULL LINING",
+        "fabric": "NYLON"
+      },
+      "amount": 1
+    },
+    {
+      "id": 2,
+      "title": "The North Face Mountaineering Jacket",
+      "description": "Two tone mountaineering jacket in black & red with a hood and multiple pockets.",
+      "category": "jackets",
+      "price": 85,
+      "size": "XL",
+      "tags": [
+        "jackets",
+        "men"
+      ],
+      "gender": "men",
+      "dimensions": {
+        "sleeveLength": 25,
+        "bust": 45,
+        "length": 28
+      },
+      "images": {
+        "front": "/assets/products/2/front.webp",
+        "back": "/assets/products/2/back.webp",
+        "brand": "/assets/products/2/brand.webp"
+      },
+      "discountPercentage": 5.5,
+      "rating": 3.28,
+      "stock": 44,
+      "warrantyInformation": "1 year warranty",
+      "shippingInformation": "Ships in 2 weeks",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Liam Garcia",
+          "reviewerEmail": "liam.garcia@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nora Russell",
+          "reviewerEmail": "nora.russell@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Elena Baker",
+          "reviewerEmail": "elena.baker@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 32,
+      "more": {
+        "sku": "E00973797",
+        "brand": "The North Face",
+        "condition": "GREAT",
+        "moreInformation": "FULL LINING",
+        "fabric": "POLYESTER"
+      },
+      "amount": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "783e1158-7a0e-4894-8858-49e759ced0da",
+      "firstName": "",
+      "lastName": "",
+      "email": "ahmetcannkaragoz@gmail.com",
+      "password": "asda12aA.",
+      "phone": "",
+      "birthDate": "",
+      "addresses": null,
+      "orders": null,
+      "wishlist": null,
+      "createdAt": "",
+      "status": "active",
+      "role": "user"
     }
   ]
 }
