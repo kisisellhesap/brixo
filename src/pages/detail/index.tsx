@@ -1,0 +1,39 @@
+import { useEffect, type FC } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import DetailSlider from "./detailSlider";
+import DetailInfo from "./detailInfo";
+import { clearSingleProduct } from "../../redux/productSlice";
+import DetailReview from "./detailReview";
+import type { AppDispatch } from "../../redux/store";
+import { getSingleProduct } from "../../redux/actions/productActions";
+
+const Detail: FC = () => {
+  const { id } = useParams();
+
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    if (id) {
+      dispatch(getSingleProduct(id));
+    }
+
+    return () => {
+      dispatch(clearSingleProduct());
+    };
+  }, [id]);
+
+  return (
+    <div>
+      <div className="flex flex-col gap-10">
+        <div className="flex max-lg:flex-col gap-5 mb-5">
+          <DetailSlider />
+          <DetailInfo />
+        </div>
+
+        <DetailReview />
+      </div>
+    </div>
+  );
+};
+
+export default Detail;
