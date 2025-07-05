@@ -8,7 +8,7 @@
 
 ## 🔗 GitHub Repository
 
-_Optional: Add your GitHub repo link here_
+https://github.com/kisisellhesap/brixo
 
 ---
 
